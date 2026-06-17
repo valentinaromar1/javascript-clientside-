@@ -3,6 +3,8 @@ let placeArray = ['store', 'beach', 'fair', 'reasterant', 'park'];
 
 let familyArray = ['mom', 'dad', 'brother', 'sister', 'grandma'];
 
+let transportArray = ['drove', 'walked', 'biked', 'took the bus', 'taxi'];
+
 let topicArray = ['news', 'gossip', 'school', 'work', 'nothin'];
 
 let weatherArray = ['sunny', 'rainy', 'cloudy', 'warm', 'cold'];
@@ -12,6 +14,7 @@ let feelingArray = ['good', 'bad', 'netural', 'eh', 'whatever'];
 //button holders
 const placeButton = document.querySelector('#placeButton');
 const familyButton = document.querySelector('#familyButton');
+const transportButton = document.querySelector('#transportButton');
 const topicButton = document.querySelector('#topicButton');
 const weatherButton = document.querySelector('#weatherButton');
 const feelingButton = document.querySelector('#feelingButton');
@@ -19,6 +22,7 @@ const feelingButton = document.querySelector('#feelingButton');
 //in order to change the outcome im changing the em to hold the array value
 const emPlace = document.querySelector('#place');
 const emFamily = document.querySelector('#family');
+const emTransport = document.querySelector('#transport');
 const emTopic = document.querySelector('#topic');
 const emWeather = document.querySelector('#weather');
 const emFeeling = document.querySelector('#feeling');
@@ -27,6 +31,8 @@ const emFeeling = document.querySelector('#feeling');
 placeButton.addEventListener("click", setPlace);
 
 familyButton.addEventListener("click", setFamily);
+
+transportButton.addEventListener("click", setTransport);
 
 topicButton.addEventListener("click", setTopic);
 
@@ -74,6 +80,18 @@ function setTopic() {
     arrayCount++;
 
     if (arrayCount >= topicArray.length){
+        arrayCount = 0;
+    }
+
+}
+//*
+function setTransport() {
+   
+    emTransport.textContent = `${transportArray[arrayCount]}`;
+    
+    arrayCount++;
+
+    if (arrayCount >= transportArray.length){
         arrayCount = 0;
     }
 
