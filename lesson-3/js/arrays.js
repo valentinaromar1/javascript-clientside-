@@ -23,9 +23,6 @@ for (let i = 0; i < myArray.length; i++){
             output.textContent += `${myArray[i][j]}, `;
         }
     }
-    else{
-        output.textContent += `${myArray[i]}, `;
-    }
 }
 
 /* STEP 4: Convert a string to an array
