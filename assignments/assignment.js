@@ -3,7 +3,7 @@ let place = ['store', 'beach', 'fair', 'reasterant', 'park'];
 
 let family = ['mom', 'dad', 'brother', 'sister', 'grandma'];
 
-let topic = ['news', 'gossip', 'school', 'work', 'nothing'];
+let topic = ['news', 'gossip', 'school', 'work', 'nothin'];
 
 let weather = ['sunny', 'rainy', 'cloudy', 'warm', 'cold'];
 
@@ -23,6 +23,7 @@ const emTopic = document.querySelector('#topic');
 const emWeather = document.querySelector('#weather');
 const emFeeling = document.querySelector('#feeling');
 
+//sets all to work appon clicking it
 placeButton.addEventListener("click", setPlace);
 
 familyButton.addEventListener("click", setFamily);
@@ -40,9 +41,7 @@ function setPlace() {
         if (place.isArray(place[i])){
             emPlace.textContent = place[i];
         }
-        if (i > 4){
-            i = 0
-        }
+
 }
 }
 
