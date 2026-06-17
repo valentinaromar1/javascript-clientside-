@@ -1,13 +1,13 @@
 //sets the arrays for each option
-let place = ['store', 'beach', 'fair', 'reasterant', 'park'];
+let placeArray = ['store', 'beach', 'fair', 'reasterant', 'park'];
 
-let family = ['mom', 'dad', 'brother', 'sister', 'grandma'];
+let familyArray = ['mom', 'dad', 'brother', 'sister', 'grandma'];
 
-let topic = ['news', 'gossip', 'school', 'work', 'nothin'];
+let topicArray = ['news', 'gossip', 'school', 'work', 'nothin'];
 
-let weather = ['sunny', 'rainy', 'cloudy', 'warm', 'cold'];
+let weatherArray = ['sunny', 'rainy', 'cloudy', 'warm', 'cold'];
 
-let feeling = ['good', 'bad', 'netural', 'eh', 'whatever'];
+let feelingArray = ['good', 'bad', 'netural', 'eh', 'whatever'];
 
 //button holders
 const placeButton = document.querySelector('#placeButton');
@@ -17,7 +17,7 @@ const weatherButton = document.querySelector('#weatherButton');
 const feelingButton = document.querySelector('#feelingButton');
 
 //in order to change the outcome im changing the em to hold the array value
-const emTopic = document.querySelector('#place');
+const emPlace = document.querySelector('#place');
 const emFamily = document.querySelector('#family');
 const emTopic = document.querySelector('#topic');
 const emWeather = document.querySelector('#weather');
@@ -34,45 +34,61 @@ weatherButton.addEventListener("click", setWeather);
 
 feelingButton.addEventListener("click", setFeeling);
 
+let placeCount = 0;
+        
 function setPlace() {
 
-    for (let i = 0; i < place.length; i++){
-        //check to see if element is an array
-        if (place.isArray(place[i])){
-            emPlace.textContent = place[i];
-        }
+    emPlace.textContent = `${placeArray[placeCount]}`;
+    
+    placeCount++;
 
-}
+    if (placeCount >= placeArray.length){
+        placeCount = 0;
+    }
+    
+    
 }
 
 function setFamily() {
-    let count2 = 0;
+   
+    emFamily.textContent = `${familyArray[placeCount]}`;
+    
+    placeCount++;
 
-    if (count2 > 5){
-        let count1 = 0;
+    if (placeCount >= familyArray.length){
+        placeCount = 0;
     }
-
+    
 }
 
 function setTopic() {
-    let count3 = 0;
+   
+    emTopic.textContent = `${topicArray[placeCount]}`;
+    
+    placeCount++;
 
-    if (count3 > 5){
-        let count1 = 0;
+    if (placeCount >= topicArray.length){
+        placeCount = 0;
     }
 
 }
 function setWeather() {
-    let count4 = 0;
+   
+    emWeather.textContent = `${weatherArray[placeCount]}`;
     
-    if (count4 > 5){
-        let count1 = 0;
+    placeCount++;
+
+    if (placeCount >= weatherArray.length){
+        placeCount = 0;
     }
 }
 function setFeeling() {
-    let count5 = 0;
+   
+    emFeeling.textContent = `${feelingArray[placeCount]}`;
     
-    if (count5 > 5){
-        let count1 = 0;
+    placeCount++;
+
+    if (placeCount >= feelingArray.length){
+        placeCount = 0;
     }
 }
