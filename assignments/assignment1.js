@@ -19,6 +19,9 @@ const topicButton = document.querySelector('#topicButton');
 const weatherButton = document.querySelector('#weatherButton');
 const feelingButton = document.querySelector('#feelingButton');
 
+//reset button
+const resetButton = document.querySelector('#resetButton');
+
 //in order to change the outcome im changing the em to hold the array value
 const emPlace = document.querySelector('#place');
 const emFamily = document.querySelector('#family');
@@ -40,6 +43,10 @@ weatherButton.addEventListener("click", setWeather);
 
 feelingButton.addEventListener("click", setFeeling);
 
+//reset button
+resetButton.addEventListener("click", setReset);
+
+
 //sets the counter for all the functions to use in changing the word 
 let arrayCount = 0;
         
@@ -56,7 +63,6 @@ function setPlace() {
     if (arrayCount >= placeArray.length){
         arrayCount = 0;
     }
-    
     
 }
 
@@ -117,4 +123,14 @@ function setFeeling() {
     if (arrayCount >= feelingArray.length){
         arrayCount = 0;
     }
+}
+
+//set reset
+function setReset() {
+    emPlace.textContent = `(set place)`
+    emFamily.textContent = `(set family)`
+    emTopic.textContent = `(set topic)`
+    emTransport.textContent = `(set transport)`
+    emWeather.textContent = `(set weather)`
+    emFeeling.textContent = `(set feeling)`
 }
