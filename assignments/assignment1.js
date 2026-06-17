@@ -1,5 +1,5 @@
 //sets the arrays for each option
-let placeArray = ['store', 'beach', 'fair', 'reasterant', 'park'];
+let placeArray = ['store', 'beach', 'fair', 'resterant', 'park'];
 
 let familyArray = ['mom', 'dad', 'brother', 'sister', 'grandma'];
 
