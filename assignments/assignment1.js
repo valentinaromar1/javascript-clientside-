@@ -3,7 +3,7 @@ let placeArray = ['store', 'beach', 'fair', 'reasterant', 'park'];
 
 let familyArray = ['mom', 'dad', 'brother', 'sister', 'grandma'];
 
-let transportArray = ['drove', 'walked', 'biked', 'took the bus', 'taxi'];
+let transportArray = ['drove', 'walked', 'biked', 'took the bus', 'took a taxi'];
 
 let topicArray = ['news', 'gossip', 'school', 'work', 'nothin'];
 
