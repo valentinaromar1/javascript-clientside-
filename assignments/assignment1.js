@@ -34,61 +34,69 @@ weatherButton.addEventListener("click", setWeather);
 
 feelingButton.addEventListener("click", setFeeling);
 
-let placeCount = 0;
+//sets the counter for all the functions to use in changing the word 
+let arrayCount = 0;
         
+//comment on this function apply to all others with (*) <- this above it
 function setPlace() {
 
-    emPlace.textContent = `${placeArray[placeCount]}`;
+    //changes the em value to the array veriable depending on what the array count is currently at
+    emPlace.textContent = `${placeArray[arrayCount]}`;
     
-    placeCount++;
+    //adds to the count in order to cycle through
+    arrayCount++;
 
-    if (placeCount >= placeArray.length){
-        placeCount = 0;
+    //if the array count is >= the length of the array it sets the count back to 0
+    if (arrayCount >= placeArray.length){
+        arrayCount = 0;
     }
     
     
 }
 
+//*
 function setFamily() {
    
-    emFamily.textContent = `${familyArray[placeCount]}`;
+    emFamily.textContent = `${familyArray[arrayCount]}`;
     
-    placeCount++;
+    arrayCount++;
 
-    if (placeCount >= familyArray.length){
-        placeCount = 0;
+    if (arrayCount >= familyArray.length){
+        arrayCount = 0;
     }
     
 }
-
+//*
 function setTopic() {
    
-    emTopic.textContent = `${topicArray[placeCount]}`;
+    emTopic.textContent = `${topicArray[arrayCount]}`;
     
-    placeCount++;
+    arrayCount++;
 
-    if (placeCount >= topicArray.length){
-        placeCount = 0;
+    if (arrayCount >= topicArray.length){
+        arrayCount = 0;
     }
 
 }
+//*
 function setWeather() {
    
-    emWeather.textContent = `${weatherArray[placeCount]}`;
+    emWeather.textContent = `${weatherArray[arrayCount]}`;
     
-    placeCount++;
+    arrayCount++;
 
-    if (placeCount >= weatherArray.length){
-        placeCount = 0;
+    if (arrayCount >= weatherArray.length){
+        arrayCount = 0;
     }
 }
+//*
 function setFeeling() {
    
-    emFeeling.textContent = `${feelingArray[placeCount]}`;
+    emFeeling.textContent = `${feelingArray[arrayCount]}`;
     
-    placeCount++;
+    arrayCount++;
 
-    if (placeCount >= feelingArray.length){
-        placeCount = 0;
+    if (arrayCount >= feelingArray.length){
+        arrayCount = 0;
     }
 }
